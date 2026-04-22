@@ -1,4 +1,4 @@
-# TollGuru Vehicle Coverage Documentation
+# TollGuru Vehicle Coverage API - Wiki Repository
 
 ## Overview
 This repository provides vehicle coverage data for TollGuru and TollTally services. It acts as a reference/metadata layer defining which vehicle types are supported across different regions. 
@@ -9,8 +9,6 @@ Defines "vehicle coverage" in the context of TollGuru and TollTally:
 - Vehicle class definitions and restrictions
 - Regional vehicle availability for toll calculation
 - Default vehicle configurations by geographic area
-
-
 
 ## Documentation
 
@@ -23,8 +21,3 @@ The wiki includes:
 - Region-wise vehicle coverage
 - Default vehicle type configuration
 
-## Note
-
-This repository exists to maintain and organize the documentation for the TollGuru Vehicle Coverage API.
-
-Please update or add documentation through the **Wiki pages**.
