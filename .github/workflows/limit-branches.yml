@@ -18,6 +18,7 @@ jobs:
             const USER_BRANCH_LIMITS = {
               'mapup-security-fix-bot[bot]': 35
             };
+            const PROTECTED_BRANCHES = ['main', 'master', 'develop', 'staging', 'production'];
 
             const actor = context.actor;
             const MAX_BRANCHES = USER_BRANCH_LIMITS[actor] ?? DEFAULT_MAX_BRANCHES;
@@ -49,9 +50,8 @@ jobs:
             let userBranches = [];
 
             for (const branch of branches) {
-              // Optimization: We can skip fetching commit if we already exceeded count?
-              // No, we need accurate count to justify deletion.
-              
+              if (PROTECTED_BRANCHES.includes(branch.name)) continue;
+
               const commitSha = branch.commit.sha;
               
               try {
