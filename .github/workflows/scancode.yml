@@ -82,7 +82,7 @@ jobs:
 
       - name: Upload BOM to Dependency-Track
         if: ${{ always() && steps.sbom_check.outputs.upload == 'true' && steps.sbom_check.outputs.count != '0' && steps.sbom_check.outputs.count != '' }}
-        uses: DependencyTrack/gh-upload-sbom@95c2b5a810450509ef8a67e4f854b42d2ddf7fbf # v4.1.0
+        uses: DependencyTrack/gh-upload-sbom@d8935b70f527d6aca6bbef5ab02db3933c9a8626 # v4.2.0
         with:
           serverhostname: '44.194.0.211'
           port: '8091'
